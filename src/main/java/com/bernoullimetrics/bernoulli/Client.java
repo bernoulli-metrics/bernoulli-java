@@ -22,6 +22,12 @@ public class Client {
     static final JsonFactory JSON_FACTORY = new JacksonFactory();
 
     public static List<Experiment> GetExperiments(String clientId, List<String> experimentIds, String userId, Map<String, String> userData) throws BernoulliException, IllegalArgumentException, IOException {
+    {
+        return GetExperiments(clientId, experimentIds, userId, userData, null);
+    }
+    }
+
+    public static List<Experiment> GetExperiments(String clientId, List<String> experimentIds, String userId, Map<String, String> userData, HttpTransport transport) throws BernoulliException, IllegalArgumentException, IOException {
         if (clientId == null || clientId.equals("")) {
             throw new IllegalArgumentException("clientId");
         }
@@ -47,9 +53,13 @@ public class Client {
             url.set(entry.getKey(), entry.getValue());
         }
 
+        if (transport == null) {
+            transport = HTTP_TRANSPORT;
+        }
+
         Response response = new Response();
         HttpRequestFactory requestFactory =
-                HTTP_TRANSPORT.createRequestFactory(new HttpRequestInitializer() {
+                transport.createRequestFactory(new HttpRequestInitializer() {
                     @Override
                     public void initialize(HttpRequest request) {
                         request.setParser(new JsonObjectParser(JSON_FACTORY));
@@ -72,6 +82,11 @@ public class Client {
 
     public static boolean GoalAttained(String clientId, String experimentId, String userId) throws BernoulliException
     {
+        return GoalAttained(clientId, experimentId, userId, null);
+    }
+
+    public static boolean GoalAttained(String clientId, String experimentId, String userId, HttpTransport transport) throws BernoulliException
+    {
         if (clientId == null || clientId.equals("")) {
             throw new IllegalArgumentException("clientId");
         }
@@ -87,9 +102,13 @@ public class Client {
         url.setScheme(SCHEME);
         url.setRawPath(PATH);
 
+        if (transport == null) {
+            transport = HTTP_TRANSPORT;
+        }
+
         GoalAttainedResponse response = new GoalAttainedResponse();
         HttpRequestFactory requestFactory =
-                HTTP_TRANSPORT.createRequestFactory(new HttpRequestInitializer() {
+                transport.createRequestFactory(new HttpRequestInitializer() {
                     @Override
                     public void initialize(HttpRequest request) {
                         request.setParser(new JsonObjectParser(JSON_FACTORY));
