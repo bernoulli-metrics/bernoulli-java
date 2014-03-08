@@ -12,7 +12,7 @@ import java.util.*;
 
 
 public class Client {
-    private static final String URL = "http://localhost:5000/client/api/experiments/";
+    private static final String URL = "https://bernoulli.herokuapp.com/client/api/experiments/";
     private static final String HOST = "localhost";
     private static final int PORT = 5000;
     private static final String SCHEME = "http";
