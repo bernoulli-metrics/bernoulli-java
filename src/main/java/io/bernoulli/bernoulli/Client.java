@@ -1,4 +1,4 @@
-package com.bernoullimetrics.bernoulli;
+package io.bernoulli.bernoulli;
 
 import com.google.api.client.http.*;
 import com.google.api.client.http.javanet.NetHttpTransport;
@@ -7,7 +7,6 @@ import com.google.api.client.json.JsonObjectParser;
 import com.google.api.client.json.jackson2.JacksonFactory;
 
 import java.io.IOException;
-import java.net.URLEncoder;
 import java.util.*;
 
 

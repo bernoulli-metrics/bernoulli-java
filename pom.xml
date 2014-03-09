@@ -4,9 +4,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>bernoulli</groupId>
+    <groupId>io.bernoulli.bernoulli</groupId>
     <artifactId>bernoulli</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1</version>
+    <name>Bernoulli</name>
+    <description>A Java SDK for Bernoulli</description>
+    <url>http://bernoulli.io</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+    <scm>
+        <url>https://github.com/bernoulli-metrics/bernoulli-java</url>
+    </scm>
+
     <dependencies>
         <dependency>
             <groupId>com.google.http-client</groupId>

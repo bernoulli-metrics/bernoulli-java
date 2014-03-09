@@ -1,4 +1,4 @@
-package com.bernoullimetrics.bernoulli;
+package io.bernoulli.bernoulli;
 
 public class BernoulliException extends Exception {
     public BernoulliException(String message) {

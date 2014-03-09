@@ -1,4 +1,4 @@
-package com.bernoullimetrics.bernoulli;
+package io.bernoulli.bernoulli;
 import com.google.api.client.json.GenericJson;
 import com.google.api.client.util.Key;
 
