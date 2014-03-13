@@ -10,7 +10,7 @@
 
     <groupId>io.bernoulli</groupId>
     <artifactId>bernoulli</artifactId>
-    <version>0.3-SNAPSHOT</version>
+    <version>0.3</version>
     <packaging>jar</packaging>
     <name>Bernoulli</name>
     <description>A Java SDK for Bernoulli</description>
