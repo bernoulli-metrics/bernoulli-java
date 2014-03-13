@@ -4,9 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.bernoulli.bernoulli</groupId>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+    <groupId>io.bernoulli</groupId>
     <artifactId>bernoulli</artifactId>
-    <version>0.1</version>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>Bernoulli</name>
     <description>A Java SDK for Bernoulli</description>
     <url>http://bernoulli.io</url>
@@ -17,8 +24,11 @@
             <url>http://www.opensource.org/licenses/mit-license.php</url>
         </license>
     </licenses>
+
     <scm>
-        <url>https://github.com/bernoulli-metrics/bernoulli-java</url>
+        <connection>scm:git:git@github.com:bernoulli-metrics/bernoulli-java.git</connection>
+        <developerConnection>scm:git:git@github.com:bernoulli-metrics/bernoulli-java.git</developerConnection>
+        <url>git@github.com:bernoulli-metrics/bernoulli-java.git</url>
     </scm>
 
     <dependencies>
@@ -39,4 +49,11 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <developers>
+        <developer>
+            <id>joe</id>
+            <name>Joe</name>
+        </developer>
+    </developers>
 </project>

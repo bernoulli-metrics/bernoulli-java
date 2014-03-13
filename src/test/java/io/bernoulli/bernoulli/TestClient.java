@@ -13,6 +13,8 @@ import org.junit.Test;
 import java.io.IOException;
 import java.util.*;
 
+import io.bernoulli.bernoulli.Client;
+
 public class TestClient {
     @Test
     public void testClientThrowsWithoutClientID() {
