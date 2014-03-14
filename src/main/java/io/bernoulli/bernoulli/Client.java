@@ -11,8 +11,7 @@ import java.util.*;
 
 
 public class Client {
-    private static final String URL = "https://bernoulli.herokuapp.com/client/api/experiments/";
-    private static final String HOST = "localhost";
+    private static final String HOST = "https://www.bernoulli.io";
     private static final int PORT = 80;
     private static final String SCHEME = "http";
     private static final String PATH = "/client/api/experiments/";
