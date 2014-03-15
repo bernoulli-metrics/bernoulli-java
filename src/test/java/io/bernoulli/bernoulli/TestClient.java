@@ -37,7 +37,7 @@ public class TestClient {
 
     @Test
     public void testClientReturnsExperiments() {
-        HttpTransport mockTransport = getMockTransport("{\"status\": \"ok\", \"value\": [{\"status\": 1, \"user_id\": \"user59\", \"segmentName\": null, \"variant\": \"blue\", \"segment\": null, \"id\": \"first\", \"name\": \"First Experiment\"}]}");
+        HttpTransport mockTransport = getMockTransport("{\"value\": [{\"variant\": \"trial\", \"segmentName\": null, \"user_id\": \"user59\", \"name\": \"signup\", \"segment\": null, \"status\": 1, \"id\": \"signup\"}], \"status\": \"ok\"}");
         List<String> experimentIds = new ArrayList<String>();
         experimentIds.add("first");
         List<Experiment> experiments = null;
@@ -52,10 +52,10 @@ public class TestClient {
         Assert.assertNotNull(experiments);
         Assert.assertEquals(1, experiments.size());
         Experiment experiment = (Experiment)experiments.get(0);
-        Assert.assertEquals("First Experiment", experiment.Name);
-        Assert.assertEquals("first", experiment.ID);
+        Assert.assertEquals("signup", experiment.Name);
+        Assert.assertEquals("signup", experiment.ID);
         Assert.assertEquals("", experiment.Segment);
-        Assert.assertEquals("blue", experiment.Variant);
+        Assert.assertEquals("trial", experiment.Variant);
         Assert.assertEquals("", experiment.SegmentName);
         Assert.assertEquals("user59", experiment.UserID);
         Assert.assertEquals(1, experiment.Status);

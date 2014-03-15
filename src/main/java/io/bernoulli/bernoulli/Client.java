@@ -11,9 +11,9 @@ import java.util.*;
 
 
 public class Client {
-    private static final String HOST = "https://www.bernoulli.io";
-    private static final int PORT = 80;
-    private static final String SCHEME = "http";
+    private static final String HOST = "www.bernoulli.io";
+    private static final int PORT = -1;
+    private static final String SCHEME = "https";
     private static final String PATH = "/client/api/experiments/";
 
     static final HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
